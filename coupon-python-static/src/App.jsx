@@ -64,7 +64,7 @@ function App() {
     if (phase === 'pressing') {
       const timer = window.setTimeout(() => {
         setPhase('opening')
-      }, 320)
+      }, 420)
       return () => window.clearTimeout(timer)
     }
 
@@ -72,14 +72,14 @@ function App() {
       setShowSparkle(true)
       const timer = window.setTimeout(() => {
         setPhase('coupon')
-      }, 900)
+      }, 1200)
       return () => window.clearTimeout(timer)
     }
 
     if (phase === 'coupon') {
       const timer = window.setTimeout(() => {
         setPhase('message')
-      }, 980)
+      }, 1400)
       return () => window.clearTimeout(timer)
     }
 
@@ -87,7 +87,7 @@ function App() {
       const timer = window.setTimeout(() => {
         setShowConfirm(true)
         setPhase('done')
-      }, 520)
+      }, 700)
       return () => window.clearTimeout(timer)
     }
   }, [phase])
@@ -101,7 +101,7 @@ function App() {
 
     window.setTimeout(() => {
       setIsPressing(false)
-    }, 240)
+    }, 300)
   }
 
   const handleConfirm = () => {
@@ -128,17 +128,17 @@ function App() {
         <div className={`sparkle sparkle-3 ${showSparkle ? 'show' : ''}`} />
 
         <section className={`headline-wrap ${phase === 'message' || phase === 'done' || phase === 'complete' ? 'show' : ''}`}>
-          <h1>새 집 필수템 구매 찬스!</h1>
-          <p>갖고 싶었던 그거, 사러 가자</p>
+          <h1>깜짝 선물 도착!</h1>
+          <p>갖고 싶었던 그거, 이제 바로 확인해요</p>
         </section>
 
         <div className={`success-overlay ${phase === 'complete' ? 'show' : ''}`}>
-          쿠폰 확인 완료
+          선물 확인 완료
         </div>
 
         <button
           type="button"
-          className={`open-button ${isPressing ? 'press' : ''} ${phase !== 'idle' ? 'hide' : ''}`}
+          className={`open-button ${isPressing ? 'press' : ''} ${phase === 'idle' ? '' : 'hide'}`}
           aria-label="선물상자 열기"
           onClick={handleOpen}
         />
