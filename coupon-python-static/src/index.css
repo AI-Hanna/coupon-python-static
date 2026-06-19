@@ -40,6 +40,8 @@ button {
   height: min(100dvh, 874px);
   max-height: 100dvh;
   overflow: hidden;
+  transform: scale(0.92);
+  transform-origin: center;
   background: linear-gradient(180deg, #eef5ff 0%, #f7f3ff 100%);
 }
 
