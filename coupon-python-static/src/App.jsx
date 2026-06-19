@@ -127,11 +127,7 @@ function App() {
         <div className={`sparkle sparkle-2 ${showSparkle ? 'show' : ''}`} />
         <div className={`sparkle sparkle-3 ${showSparkle ? 'show' : ''}`} />
 
-        <div className={`gift-overlay ${phase === 'coupon' || phase === 'message' || phase === 'done' || phase === 'complete' ? 'show' : ''}`}>
-          <span>깜짝 선물</span>
-        </div>
-
-        <section className={`headline-wrap ${phase === 'message' || phase === 'done' || phase === 'complete' ? 'show' : ''}`}>
+        <section className={`headline-wrap ${phase === 'message' || phase === 'done' ? 'show' : ''}`}>
           <h1>깜짝 선물 도착!</h1>
           <p>열어보면 특별한 선물이 기다려요</p>
         </section>
