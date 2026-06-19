@@ -31,18 +31,20 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
   background: linear-gradient(180deg, #eef5ff 0%, #f7f3ff 100%);
 }
 
 .scene {
   position: relative;
-  width: min(100vw, 402px);
-  height: min(100dvh, 874px);
+  width: min(100vw, 430px);
+  height: min(100dvh, 932px);
   max-height: 100dvh;
   overflow: hidden;
-  transform: scale(0.88);
+  transform: scale(0.84);
   transform-origin: center;
   background: linear-gradient(180deg, #eef5ff 0%, #f7f3ff 100%);
+  border-radius: 32px;
 }
 
 .screen {
@@ -109,8 +111,8 @@ button {
 .headline-wrap {
   position: absolute;
   left: 50%;
-  bottom: 18%;
-  width: min(80%, 280px);
+  bottom: 16%;
+  width: min(82%, 290px);
   transform: translateX(-50%) translateY(18px);
   opacity: 0;
   text-align: center;
@@ -126,16 +128,39 @@ button {
 .headline-wrap h1 {
   margin: 0;
   color: #2d1b06;
-  font-size: 1.6rem;
+  font-size: 1.45rem;
   font-weight: 800;
   line-height: 1.2;
 }
 
 .headline-wrap p {
-  margin: 0.5rem 0 0;
+  margin: 0.45rem 0 0;
   color: #5f4a38;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
+}
+
+.gift-overlay {
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  transform: translate(-50%, -50%) scale(0.96);
+  opacity: 0;
+  z-index: 11;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #6a4d1f;
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  box-shadow: 0 12px 24px rgba(58, 42, 18, 0.14);
+  transition: opacity 260ms ease, transform 260ms ease;
+}
+
+.gift-overlay.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .success-overlay {
@@ -172,9 +197,9 @@ button {
 }
 
 .open-button {
-  bottom: calc(1rem + env(safe-area-inset-bottom));
-  width: 76%;
-  height: 80px;
+  bottom: calc(0.8rem + env(safe-area-inset-bottom));
+  width: 74%;
+  height: 74px;
   border-radius: 18px;
   transition: transform 180ms ease, opacity 200ms ease;
 }
@@ -188,9 +213,9 @@ button {
 }
 
 .confirm-button {
-  bottom: calc(0.9rem + env(safe-area-inset-bottom));
-  width: 78%;
-  height: 68px;
+  bottom: calc(0.65rem + env(safe-area-inset-bottom));
+  width: 76%;
+  height: 64px;
   border-radius: 16px;
   opacity: 0;
   transform: translateX(-50%) translateY(22px);

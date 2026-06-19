@@ -127,19 +127,23 @@ function App() {
         <div className={`sparkle sparkle-2 ${showSparkle ? 'show' : ''}`} />
         <div className={`sparkle sparkle-3 ${showSparkle ? 'show' : ''}`} />
 
+        <div className={`gift-overlay ${phase === 'coupon' || phase === 'message' || phase === 'done' || phase === 'complete' ? 'show' : ''}`}>
+          <span>깜짝 선물</span>
+        </div>
+
         <section className={`headline-wrap ${phase === 'message' || phase === 'done' || phase === 'complete' ? 'show' : ''}`}>
           <h1>깜짝 선물 도착!</h1>
-          <p>갖고 싶었던 그거, 이제 바로 확인해요</p>
+          <p>열어보면 특별한 선물이 기다려요</p>
         </section>
 
         <div className={`success-overlay ${phase === 'complete' ? 'show' : ''}`}>
-          선물 확인 완료
+          선물 확인했어요
         </div>
 
         <button
           type="button"
           className={`open-button ${isPressing ? 'press' : ''} ${phase === 'idle' ? '' : 'hide'}`}
-          aria-label="선물상자 열기"
+          aria-label="깜짝 선물 열기"
           onClick={handleOpen}
         />
 
