@@ -20,7 +20,7 @@ HTML = """<!doctype html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>이거사줘 쿠폰</title>
+  <title>깜짝 선물 쿠폰 (made 하진 & 현지)</title>
   <style>
     * { box-sizing: border-box; }
     html, body { margin: 0; width: 100%; min-height: 100%; background: #eef0f5; font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; }
