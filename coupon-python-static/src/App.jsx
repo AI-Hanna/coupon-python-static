@@ -1,35 +1,40 @@
 import { useEffect, useState } from 'react'
+import screen01 from '../assets/screen_01_default.jpg'
+import screen02 from '../assets/screen_02_button_click.jpg'
+import screen03 from '../assets/screen_03_box_open.jpg'
+import screen04 from '../assets/screen_04_coupon_appear.jpg'
+import screen05 from '../assets/screen_05_message_show.jpg'
+import screen06 from '../assets/screen_06_cta_show.jpg'
 
-const BASE_PATH = '/assets'
 const SCREENS = [
   {
     id: 'screen_01_default',
-    image: `${BASE_PATH}/screen_01_default.jpg`,
+    image: screen01,
     alt: '기본 화면',
   },
   {
     id: 'screen_02_button_click',
-    image: `${BASE_PATH}/screen_02_button_click.jpg`,
+    image: screen02,
     alt: '버튼 클릭 반응',
   },
   {
     id: 'screen_03_box_open',
-    image: `${BASE_PATH}/screen_03_box_open.jpg`,
+    image: screen03,
     alt: '상자 열림',
   },
   {
     id: 'screen_04_coupon_appear',
-    image: `${BASE_PATH}/screen_04_coupon_appear.jpg`,
+    image: screen04,
     alt: '쿠폰 등장',
   },
   {
     id: 'screen_05_message_show',
-    image: `${BASE_PATH}/screen_05_message_show.jpg`,
+    image: screen05,
     alt: '메시지 노출',
   },
   {
     id: 'screen_06_cta_show',
-    image: `${BASE_PATH}/screen_06_cta_show.jpg`,
+    image: screen06,
     alt: 'CTA 노출',
   },
 ]

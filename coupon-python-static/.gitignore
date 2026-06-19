@@ -1,5 +1,6 @@
 node_modules/
 dist/
+hehe/
 .vscode/
 .DS_Store
 *.log
